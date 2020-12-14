@@ -2,11 +2,10 @@ const inquirer = require("inquirer");
 const mysql = require("mysql");
 const cTable = require("console.table");
 
-
 let con = mysql.createConnection({
-    process.env.DB_NAME,
-    process.env.DB_USER,
-    process.env.DB_PASSWORD,
+    database: "EmployeeTracker_db",
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
     host: "localhost",
     port: 3306,
 });
